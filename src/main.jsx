@@ -6,8 +6,8 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { Protected } from './components/index.js'
-import Login from './pages/Login.jsx'
+import { Login, Protected } from './components/index.js'
+// import Login from './pages/Login.jsx'
 
 
 import AddPost from "./pages/AddPost";
