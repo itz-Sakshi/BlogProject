@@ -6,8 +6,7 @@ import { Provider } from 'react-redux'
 import store from './store/store.js'
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import Home from './pages/Home.jsx'
-import { Login, Protected } from './components/index.js'
-// import Login from './pages/Login.jsx'
+import { AuthLayout, Login } from './components/index.js'
 
 
 import AddPost from "./pages/AddPost";
@@ -30,44 +29,44 @@ const router = createBrowserRouter([
         {
             path: "/login",
             element: (
-                <Protected authentication={false}>
+                <AuthLayout authentication={false}>
                     <Login />
-                </Protected>
+                </AuthLayout>
             ),
         },
         {
             path: "/signup",
             element: (
-                <Protected authentication={false}>
+                <AuthLayout authentication={false}>
                     <Signup />
-                </Protected>
+                </AuthLayout>
             ),
         },
         {
             path: "/all-posts",
             element: (
-                <Protected authentication>
+                <AuthLayout authentication>
                     {" "}
                     <AllPosts />
-                </Protected>
+                </AuthLayout>
             ),
         },
         {
             path: "/add-post",
             element: (
-                <Protected authentication>
+                <AuthLayout authentication>
                     {" "}
                     <AddPost />
-                </Protected>
+                </AuthLayout>
             ),
         },
         {
             path: "/edit-post/:slug",
             element: (
-                <Protected authentication>
+                <AuthLayout authentication>
                     {" "}
                     <EditPost />
-                </Protected>
+                </AuthLayout>
             ),
         },
         {
@@ -79,8 +78,9 @@ const router = createBrowserRouter([
 ])
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  
+  <React.StrictMode>
     <Provider store={store}>
     <RouterProvider router={router}/>
     </Provider>
+  </React.StrictMode>,
 )
