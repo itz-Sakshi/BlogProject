@@ -26,7 +26,7 @@ function App() {
     <div className="flex flex-col min-h-screen">
         <Header/>
         {/* Main Content */}
-        <main className="flex-grow">
+        <main className="flex-grow bg-[#102742]">
             <Outlet />
         </main>
         {/* Footer */}
