@@ -1,143 +1,81 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Logo from '../Logo'
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Logo from '../Logo';
 
 function Footer() {
-  return (
-    <section className="relative overflow-hidden py-10 bg-gray-400 border border-t-2 border-t-black">
-            <div className="relative z-10 mx-auto max-w-7xl px-4">
-                <div className="-m-6 flex flex-wrap">
-                    <div className="w-full p-6 md:w-1/2 lg:w-5/12">
-                        <div className="flex h-full flex-col justify-between">
-                            <div className="mb-4 inline-flex items-center">
+    return (
+        <section className="relative py-5 bg-[#2D7D64] border-t-2 border-[#E8E8E8] h-[35vh] w-full overflow-y-hidden">
+            <div className="max-w-screen-xl mx-auto px-4">
+                <div className="flex flex-wrap justify-between">
+                    {/* Logo Section */}
+                    <div className="w-full md:w-1/4 p-4">
+                        <div className="flex flex-col h-full justify-between">
+                            <div className="mb-2">
                                 <Logo width="100px" />
                             </div>
-                            <div>
-                                <p className="text-sm text-gray-600">
-                                    &copy; Copyright 2023. All Rights Reserved by DevUI.
-                                </p>
-                            </div>
+                            <p className="text-sm text-[#E8E8E8] mt-2">
+                                &copy; 2023. All Rights Reserved by DevUI.
+                            </p>
                         </div>
                     </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                                Company
-                            </h3>
-                            <ul>
-                                <li className="mb-4">
+                    {/* Company Links */}
+                    <div className="w-full md:w-1/4 lg:w-2/12 p-4">
+                        <h3 className="text-xs font-semibold uppercase text-[#E8E8E8] mb-4">
+                            Company
+                        </h3>
+                        <ul>
+                            {['Features', 'Pricing', 'Affiliate Program', 'Press Kit'].map((item, index) => (
+                                <li key={index} className="mb-2">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className="text-sm font-medium text-[#E8E8E8] hover:underline"
                                         to="/"
                                     >
-                                        Features
+                                        {item}
                                     </Link>
                                 </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Pricing
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Affiliate Program
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Press Kit
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            ))}
+                        </ul>
                     </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-2/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                                Support
-                            </h3>
-                            <ul>
-                                <li className="mb-4">
+                    {/* Support Links */}
+                    <div className="w-full md:w-1/4 lg:w-2/12 p-4">
+                        <h3 className="text-xs font-semibold uppercase text-[#E8E8E8] mb-4">
+                            Support
+                        </h3>
+                        <ul>
+                            {['Account', 'Help', 'Contact Us', 'Customer Support'].map((item, index) => (
+                                <li key={index} className="mb-2">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className="text-sm font-medium text-[#E8E8E8] hover:underline"
                                         to="/"
                                     >
-                                        Account
+                                        {item}
                                     </Link>
                                 </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Help
-                                    </Link>
-                                </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Contact Us
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Customer Support
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            ))}
+                        </ul>
                     </div>
-                    <div className="w-full p-6 md:w-1/2 lg:w-3/12">
-                        <div className="h-full">
-                            <h3 className="tracking-px mb-9  text-xs font-semibold uppercase text-gray-500">
-                                Legals
-                            </h3>
-                            <ul>
-                                <li className="mb-4">
+                    {/* Legal Links */}
+                    <div className="w-full md:w-1/4 lg:w-3/12 p-4">
+                        <h3 className="text-xs font-semibold uppercase text-[#E8E8E8] mb-4">
+                            Legals
+                        </h3>
+                        <ul>
+                            {['Terms & Conditions', 'Privacy Policy', 'Licensing'].map((item, index) => (
+                                <li key={index} className="mb-2">
                                     <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
+                                        className="text-sm font-medium text-[#E8E8E8] hover:underline"
                                         to="/"
                                     >
-                                        Terms &amp; Conditions
+                                        {item}
                                     </Link>
                                 </li>
-                                <li className="mb-4">
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Privacy Policy
-                                    </Link>
-                                </li>
-                                <li>
-                                    <Link
-                                        className=" text-base font-medium text-gray-900 hover:text-gray-700"
-                                        to="/"
-                                    >
-                                        Licensing
-                                    </Link>
-                                </li>
-                            </ul>
-                        </div>
+                            ))}
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-  )
+    );
 }
 
-export default Footer
+export default Footer;
