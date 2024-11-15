@@ -11,36 +11,28 @@ function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    authService
-      .getCurrentUser()
-      .then((userData) => {
-        if (userData) {
-          dispatch(login({ userData }));
-        } else {
-          dispatch(logout());
-        }
-      })
-      .finally(() => setLoading(false));
-  }, [dispatch]);
-
-  if (loading) {
-    return <div>Loading...</div>; // You can replace this with a spinner or skeleton loader.
-  }
-
-  return (
-    <div className="min-h-screen flex flex-col bg-gray-400">
-      {/* Header */}
-      <Header />
-      
-      {/* Main Content */}
-      <main className="flex-grow">
+    authService.getCurrentUser()
+    .then((userData) => {
+      if (userData) {
+        dispatch(login({userData}))
+      } else {
+        dispatch(logout())
+      }
+    })
+    .finally(() => setLoading(false))
+  }, [])
+  
+  return !loading ? (
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main className='h-[40vh]'>
         <Outlet />
-      </main>
-      
-      {/* Footer */}
-      <Footer />
+        </main>
+        <Footer />
+      </div>
     </div>
-  );
+  ) : null
 }
 
-export default App;
+export default App
