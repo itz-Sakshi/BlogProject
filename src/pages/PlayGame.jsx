@@ -5,7 +5,7 @@ import bgHome from '../assets/images/bg-home.jpg';
 const PlayGame = () => {
   return (
     <div className="w-full p-4">
-      <h1 className="text-2xl font-bold p-10">Select Your Room</h1>
+      <h1 className="text-2xl font-bold p-10 text-center w-full">Select Your Room</h1>
       <div className="rooms flex justify-center items-center gap-3">
         <a
           href="#"
