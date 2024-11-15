@@ -3,26 +3,26 @@ import bgHome from '../assets/images/bg-home.jpg';
 
 const PlayGame = () => {
   return (
-    <div className="w-full p-4 h-[100vh]">
+    <div className="h-[92vh]">
       <h1 className="text-2xl font-bold p-8 text-center w-full text-white">Select Your Room</h1>
       <div className="relative rooms flex justify-center items-center gap-10">
         
         {/* Room 1 */}
         <a
           href="#"
-          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:opacity-40"
         >
           <img
             className="object-cover w-full rounded-t-lg"
             src={bgHome}
-            alt="Room 2"
+            alt="Room 1"
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Learn about the best ways to repay your debt 
+              Master the Art of Debt Repayment
             </h5>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021.
+              Discover practical strategies and expert tips to pay off your debt faster and smarter.
             </p>
             <button type="button" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
               Debt Management
@@ -33,7 +33,7 @@ const PlayGame = () => {
         {/* Room 2 */}
         <a
           href="#"
-          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:opacity-40"
         >
           <img
             className="object-cover w-full rounded-t-lg "
@@ -42,13 +42,13 @@ const PlayGame = () => {
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
+              Unlock the Secrets to Smart Tax Planning
             </h5>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021.
+              Learn how to optimize your taxes and keep more of your hard-earned money. 
             </p>
             <button type="button" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
-              Taxation
+              Tax Planning
             </button>
           </div>
         </a>
@@ -56,26 +56,25 @@ const PlayGame = () => {
         {/* Room 3 */}
         <a
           href="#"
-          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700"
+          className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:opacity-40"
         >
           <img
             className="object-cover w-full rounded-t-lg"
             src={bgHome}
-            alt="Room 2"
+            alt="Room 3"
           />
           <div className="flex flex-col justify-between p-4 leading-normal">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              Noteworthy technology acquisitions 2021
+              Grow Your Wealth with Smart Savings
             </h5>
             <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
-              Here are the biggest enterprise technology acquisitions of 2021.
+              Unlock the power of saving effectively, and set yourself up for long-term financial success.
             </p>
             <button type="button" className="text-white bg-gradient-to-r from-purple-500 via-purple-600 to-purple-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-purple-300 dark:focus:ring-purple-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mb-2">
-              Savings
+              Wealth Management
             </button>
           </div>
         </a>
-
         
       </div>
     </div>

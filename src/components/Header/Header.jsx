@@ -53,7 +53,7 @@ function Header() {
 
 
   return (
-    <header className='position-fixed w-[100vw] py-3 shadow bg-[#2D7D64] top-0 border-b-2 z-10'>
+    <header className='position-fixed w-full py-3 shadow bg-[#2D7D64] top-0 border-b-2 z-10'>
       <Container>
         <nav className='flex justify-center'>
           <div className='mr-4 '>
