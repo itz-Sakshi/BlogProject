@@ -33,7 +33,7 @@ const router = createBrowserRouter([
             element: <Videos />,
         },
         {
-            path: "/take-quiz",
+            path: "/play-game",
             element: <PlayGame />,
         },
         {

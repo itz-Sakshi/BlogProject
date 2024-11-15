@@ -21,7 +21,7 @@ function Header() {
     }, 
     {
       name: 'Play Game',
-      slug: "/take-quiz",
+      slug: "/play-game",
       active: true
     }, 
     {
