@@ -24,10 +24,10 @@ function App() {
   }, []);
 
   return !loading ? (
-    <div className="flex flex-col min-h-screen text-[#E8E8E8]">
-      <Header />
-      {/* Main Content */}
-      <main className="flex-grow bg-[#041121]">
+    <div className='min-h-screen flex flex-wrap content-between bg-gray-400'>
+      <div className='w-full block'>
+        <Header />
+        <main>
         <Outlet />
       </main>
       {/* Footer */}
@@ -36,4 +36,4 @@ function App() {
   ) : null;
 }
 
-export default App;
+export default App
