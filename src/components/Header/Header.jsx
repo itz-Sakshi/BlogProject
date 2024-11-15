@@ -15,6 +15,21 @@ function Header() {
       active: true
     }, 
     {
+      name: 'Videos',
+      slug: "/videos",
+      active: true
+    }, 
+    {
+      name: 'Take Quiz',
+      slug: "/take-quiz",
+      active: true
+    }, 
+    {
+      name: 'Posts',
+      slug: "/posts",
+      active: authStatus
+    }, 
+    {
       name: "Login",
       slug: "/login",
       active: !authStatus,
@@ -25,8 +40,8 @@ function Header() {
       active: !authStatus,
   },
   {
-      name: "All Posts",
-      slug: "/all-posts",
+      name: "My Posts",
+      slug: "/my-posts",
       active: authStatus,
   },
   {
@@ -38,13 +53,12 @@ function Header() {
 
 
   return (
-    <header className='py-3 shadow bg-gray-500'>
+    <header className='fixed w-[100vw] py-3 shadow bg-[#2D7D64] top-0 border-b-2 z-10'>
       <Container>
-        <nav className='flex'>
-          <div className='mr-4'>
+        <nav className='flex justify-center'>
+          <div className='mr-4 '>
             <Link to='/'>
-              <Logo width='70px'   />
-
+              <Logo width='70px' />
               </Link>
           </div>
           <ul className='flex ml-auto'>
@@ -53,7 +67,7 @@ function Header() {
               <li key={item.name}>
                 <button
                 onClick={() => navigate(item.slug)}
-                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full'
+                className='inline-bock px-6 py-2 duration-200 hover:bg-blue-100 rounded-full hover:text-[#041121]'
                 >{item.name}</button>
               </li>
             ) : null

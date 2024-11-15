@@ -96,6 +96,21 @@ export class Service{
         }
     }
 
+    async getMyPosts(userId, queries = [Query.equal("userId", userId)]){
+        try {
+            return await this.databases.listDocuments(
+                conf.appwriteDatabaseId,
+                conf.appwriteCollectionId,
+                queries,
+                
+
+            )
+        } catch (error) {
+            console.log("Appwrite serive :: getPosts :: error", error);
+            return false
+        }
+    }
+
     // file upload service
 
     async uploadFile(file){
