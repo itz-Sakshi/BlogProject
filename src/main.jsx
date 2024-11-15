@@ -10,10 +10,14 @@ import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 import Videos from './pages/Videos.jsx'
 import PlayGame from './pages/PlayGame.jsx'
+import PlayGameLayout from './pages/PlayGameLayout.jsx'
+import Taxation from './pages/Taxation.jsx'
+import Savings from "./pages/Savings.jsx"
 
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
 import EditPost from "./pages/EditPost";
+import Debt from './pages/Debt.jsx'
 
 import Post from "./pages/Post";
 
@@ -33,8 +37,26 @@ const router = createBrowserRouter([
             element: <Videos />,
         },
         {
-            path: "/play-game",
-            element: <PlayGame />,
+            path: '/play-game', // Parent route
+            element: <PlayGameLayout />, // Layout component
+            children: [
+              {
+                index: true, // Default route under /play-game
+                element: <PlayGame />,
+              },
+              {
+                path: 'debt', // Child route: /play-game/debt
+                element: <Debt />,
+              },
+              {
+                path: 'taxation', // Child route: /play-game/taxation
+                element: <Taxation />,
+              },
+              {
+                path: 'savings', // Child route: /play-game/savings
+                element: <Savings />,
+              },
+            ],
         },
         {
             path: "/posts",

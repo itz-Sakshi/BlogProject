@@ -1,15 +1,18 @@
 import React from "react";
 import bgHome from '../assets/images/bg-home.jpg';
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const PlayGame = () => {
+    const navigate = useNavigate();
   return (
     <div className="h-[92vh]">
       <h1 className="text-2xl font-bold p-8 text-center w-full text-white">Select Your Room</h1>
       <div className="relative rooms flex justify-center items-center gap-10">
         
         {/* Room 1 */}
-        <a
-          href="#"
+        <Link
+          to="debt"
           className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:opacity-40"
         >
           <img
@@ -28,11 +31,11 @@ const PlayGame = () => {
               Debt Management
             </button>
           </div>
-        </a>
+        </Link>
 
         {/* Room 2 */}
-        <a
-          href="#"
+        <Link
+          to="taxation"
           className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:opacity-40"
         >
           <img
@@ -51,11 +54,11 @@ const PlayGame = () => {
               Tax Planning
             </button>
           </div>
-        </a>
+        </Link>
 
         {/* Room 3 */}
-        <a
-          href="#"
+        <Link
+          to="savings"
           className="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow max-w-xs hover:opacity-40"
         >
           <img
@@ -74,7 +77,7 @@ const PlayGame = () => {
               Wealth Management
             </button>
           </div>
-        </a>
+        </Link>
         
       </div>
     </div>
