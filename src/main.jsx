@@ -9,7 +9,7 @@ import AllPosts from './pages/AllPosts.jsx'
 import Home from './pages/Home.jsx'
 import { AuthLayout, Login } from './components/index.js'
 import Videos from './pages/Videos.jsx'
-import Quiz from './pages/Quiz.jsx'
+import PlayGame from './pages/PlayGame.jsx'
 
 import AddPost from "./pages/AddPost";
 import Signup from './pages/Signup'
@@ -34,7 +34,7 @@ const router = createBrowserRouter([
         },
         {
             path: "/take-quiz",
-            element: <Quiz />,
+            element: <PlayGame />,
         },
         {
             path: "/posts",
